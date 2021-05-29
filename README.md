@@ -17,7 +17,7 @@ Our job was to update an existing budget tracker application to allow for offlin
 
 ## Usage
 
-Run node start in the terminal.
+Run npm start in the terminal.
 
 ## Questions 
 

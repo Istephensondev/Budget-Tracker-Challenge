@@ -18,7 +18,6 @@ const FILE_TO_CACHE = [
     '/manifest.json'
 ];
 
-// install
 self.addEventListener('install', e => {
     e.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
@@ -28,7 +27,7 @@ self.addEventListener('install', e => {
     )
 });
 
-// activate
+
 self.addEventListener('activate', e => {
     e.waitUntil(
         caches.keys().then(keyList => {
@@ -48,7 +47,7 @@ self.addEventListener('activate', e => {
 });
 
 
-// fetch
+
 self.addEventListener('fetch', e => {
     if (e.request.url.includes('/api/')) {
         e.respondWith(
